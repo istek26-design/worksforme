@@ -1,54 +1,62 @@
-[
-  {
-    "command": "worksforme --help",
-    "exit_code": 0,
-    "expected": 0
-  },
-  {
-    "command": "worksforme --version",
-    "exit_code": 0,
-    "expected": 0
-  },
-  {
-    "command": "worksforme info",
-    "exit_code": 0,
-    "expected": 0
-  },
-  {
-    "command": "worksforme diagnose",
-    "exit_code": 0,
-    "expected": 0
-  },
-  {
-    "command": "worksforme diagnose --json",
-    "exit_code": 0,
-    "expected": 0
-  },
-  {
-    "command": "worksforme fix --dry-run",
-    "exit_code": 0,
-    "expected": 0
-  },
-  {
-    "command": "worksforme diagnose examples/broken_project",
-    "exit_code": 1,
-    "expected": 1
-  },
-  {
-    "command": "worksforme diagnose examples/broken_project --json",
-    "exit_code": 1,
-    "expected": 1
-  },
-  {
-    "command": "python -m pytest -q",
-    "exit_code": 0
-  },
-  {
-    "command": "python -m ruff check --config pyproject.toml .",
-    "exit_code": 0
-  },
-  {
-    "command": "python -m build",
-    "exit_code": 0
-  }
-]
+{
+  "local_platform": "macOS arm64",
+  "local_python": "3.11.0",
+  "pytest_passed": 39,
+  "checks": [
+    {
+      "command": "worksforme --help",
+      "exit_code": 0,
+      "expected": 0
+    },
+    {
+      "command": "worksforme --version",
+      "exit_code": 0,
+      "expected": 0
+    },
+    {
+      "command": "worksforme info",
+      "exit_code": 0,
+      "expected": 0
+    },
+    {
+      "command": "worksforme diagnose",
+      "exit_code": 0,
+      "expected": 0
+    },
+    {
+      "command": "worksforme diagnose --json",
+      "exit_code": 0,
+      "expected": 0
+    },
+    {
+      "command": "worksforme fix --dry-run",
+      "exit_code": 0,
+      "expected": 0
+    },
+    {
+      "command": "worksforme diagnose examples/broken_project",
+      "exit_code": 1,
+      "expected": 1
+    },
+    {
+      "command": "worksforme diagnose examples/broken_project --json",
+      "exit_code": 1,
+      "expected": 1
+    },
+    {
+      "command": "python -m pytest -q",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ruff check --config pyproject.toml .",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m build",
+      "exit_code": 0
+    }
+  ],
+  "wheel_clean_environment": "help/version passed; Apache-2.0 metadata and license verified",
+  "credential_scan": "tracked files and Git history reviewed; no real credentials or personal paths observed; fabricated test credentials excluded",
+  "ci_url": "https://github.com/istek26-design/worksforme/actions/workflows/ci.yml"
+}

@@ -8,6 +8,7 @@ worksforme helps explain why a Python project runs on one machine and fails on
 another: incompatible interpreters, missing packages, undeclared imports and absent
 configuration. It reads source and metadata without executing the project.
 
+[![CI](https://github.com/istek26-design/worksforme/actions/workflows/ci.yml/badge.svg)](https://github.com/istek26-design/worksforme/actions/workflows/ci.yml)
 ![Python 3.10–3.13](https://img.shields.io/badge/python-3.10%E2%80%933.13-blue)
 ![Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue)
 
@@ -26,9 +27,9 @@ git clone https://github.com/istek26-design/worksforme.git
 cd worksforme
 ```
 
-The intended published command is `pip install worksforme`. This project has **not**
-been published and PyPI name ownership has not been verified. Until a release is
-published, install this repository in a virtual environment:
+The intended published command is `pip install worksforme`. The distribution has **not**
+been published to PyPI and name ownership has not been verified. Install this
+repository in a virtual environment:
 
 ```bash
 python -m venv .venv
