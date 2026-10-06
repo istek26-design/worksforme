@@ -1,0 +1,5 @@
+[project]
+name = "intentionally-broken"
+version = "0.0.0"
+requires-python = ">=3.99"
+dependencies = ["worksforme-demo-missing-package==1.0", "packaging<1"]

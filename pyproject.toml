@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+[project]
+name = "worksforme"
+version = "0.1.0"
+description = "Diagnose and fix common problems in Python development environments."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+keywords = ["python", "cli", "diagnostics", "dependencies", "developer-tools"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = ["typer>=0.12,<1", "rich>=13,<15", "packaging>=24", "tomli>=2; python_version < '3.11'"]
+[project.urls]
+Homepage = "https://github.com/istek26-design/worksforme"
+Repository = "https://github.com/istek26-design/worksforme"
+Issues = "https://github.com/istek26-design/worksforme/issues"
+Changelog = "https://github.com/istek26-design/worksforme/blob/main/CHANGELOG.md"
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.8", "build>=1"]
+[project.scripts]
+worksforme = "worksforme.cli:app"
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B"]
+ignore = ["B008"]
+[tool.ruff.lint.per-file-ignores]
+"examples/broken_project/*" = ["F401"]

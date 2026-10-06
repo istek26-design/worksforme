@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose a practical improvement
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Never paste API keys, passwords, tokens, or .env secrets."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and safety considerations

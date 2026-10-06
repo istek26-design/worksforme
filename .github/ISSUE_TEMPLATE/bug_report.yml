@@ -1,0 +1,68 @@
+name: Bug report
+description: Report a reproducible diagnostic or CLI problem
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Never paste API keys, passwords, tokens, or .env secrets. Report vulnerabilities privately using SECURITY.md."
+  - type: input
+    id: version
+    attributes:
+      label: worksforme version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12.0"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "Linux, macOS, or Windows; include version"
+    validations:
+      required: true
+  - type: input
+    id: manager
+    attributes:
+      label: Package manager
+      placeholder: "pip / uv / Poetry / Pipenv / other"
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Command
+      placeholder: "worksforme diagnose --json"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: "Use a minimal project with fake credentials"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs
+      placeholder: "Never paste API keys, passwords, tokens, or .env secrets."
+    validations:
+      required: false
